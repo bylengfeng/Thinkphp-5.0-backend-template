@@ -193,7 +193,7 @@ class AdministratorController extends AdminAuth
 	        	$info = $file->rule('uniqid')->move(ROOT_PATH . 'public' . DS . 'uploads'); //保存原图
 
 	            // 读取图片
-	            $image = Image::open($file);
+	            $image = Image::open($info);
 	            // 图片处理
 	            $image_type = request()->param('type') ? request()->param('type') : 1;
 	            switch ($image_type) {
